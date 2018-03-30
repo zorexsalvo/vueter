@@ -7,6 +7,7 @@ import router from './router';
 
 Vue.config.productionTip = false;
 
+let app;
 const config = {
   apiKey: '',
   authDomain: '',
@@ -17,11 +18,14 @@ const config = {
 };
 
 firebase.initializeApp(config);
-
-/* eslint-disable no-new */
-new Vue({
-  el: '#app',
-  router,
-  components: { App },
-  template: '<App/>',
+firebase.auth().onAuthStateChanged(() => {
+  if (!app) {
+    /* eslint-disable no-new */
+    app = new Vue({
+      el: '#app',
+      router,
+      components: { App },
+      template: '<App/>',
+    });
+  }
 });

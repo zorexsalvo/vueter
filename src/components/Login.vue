@@ -62,8 +62,7 @@ export default {
     logIn() {
       firebase.auth().signInWithEmailAndPassword(this.email, this.password).then(
         () => {
-          // eslint-disable-next-line
-          alert('Login succesful!');
+          this.$router.replace('home');
         },
         (err) => {
           // eslint-disable-next-line
