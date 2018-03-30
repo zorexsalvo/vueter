@@ -2,7 +2,7 @@
   <div>
     <div class="columns">
       <div class="column is-one-third is-offset-one-third">
-        <h6 class="title">Sign In</h6>
+        <h6 class="title">Sign Up</h6>
 
         <div class="field">
           <div class="control">
@@ -18,13 +18,13 @@
 
         <div class="field is-grouped">
           <div class="control">
-            <button class="button is-link">Login</button>
+            <button class="button is-link">Register</button>
           </div>
           <div class="control">
             <router-link
-              class="button is-text"
-              :to="{ name: 'SignUp' }">
-              Don't have an account yet? Sign Up
+              :to='{ name: "Login" }'
+              class="button is-text">
+              Already Have an Account? Login
             </router-link>
           </div>
         </div>
