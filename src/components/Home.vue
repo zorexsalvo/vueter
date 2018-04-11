@@ -90,9 +90,9 @@ export default {
       this.post = '';
       const reference = firebase.database().ref('posts/');
       reference.once('value').then(
-      (data) => {
-        this.posts = data.val();
-      });
+        (data) => {
+          this.posts = data.val();
+        });
     },
   },
   computed: {
